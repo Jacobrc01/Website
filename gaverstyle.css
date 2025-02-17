@@ -1,0 +1,172 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #40513B;
+    background-color: #fff;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #FFFBE6;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #40513B;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: gray;
+}
+
+header {
+    height: 100vh;
+    background: url('20230131_161906.jpg') center/cover fixed no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+header h1, header p {
+    position: relative;
+    z-index: 1;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+header h1 {
+    font-size: 4rem;
+    color: #FFFBE6;
+    margin-bottom: 20px;
+    font-family: 'DM Sans';
+}
+
+header p {
+    font-size: 1.5rem;
+    color: #FCCD2A;
+}
+
+section {
+    padding: 60px 20px;
+}
+
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+}
+
+h3 {
+    margin-top: 10px;
+}
+
+.gallery {
+    display: flex;
+    gap: 80px;
+    margin-bottom: 60px;
+}
+
+.oenske {
+    flex: 1;
+    text-align: center;
+  
+}
+
+.oenske img {
+    width: 100%;
+    max-width: 300px;
+    max-height: 190px;
+    border-radius: 10px;
+    object-fit: cover;
+    border: 2px solid #609966;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.oenske img:hover {
+    transform: scale(1.05);
+    filter: brightness(0.7);
+}
+
+
+@media (max-width: 768px) {
+    /* Scaling the header as before */
+    header {
+        transform: scale(1); /* Scale down the header */
+        height: 80vh; /* Adjust height for smaller screens */
+    }
+
+    header h1 {
+        font-size: 3rem; /* Adjust heading size */
+    }
+
+    header p {
+        font-size: 1.2rem; /* Adjust paragraph size */
+    }
+
+    /* Make the nav bar taller */
+    nav {
+        padding: 10px 0; /* Increase padding to make the nav bar taller */
+    }
+
+    /* You can also adjust the padding inside the nav items */
+    nav ul {
+        padding: 10px; /* Adjust padding for nav items */
+    }
+    
+    /* Optionally, increase spacing between nav links */
+    nav ul li {
+        margin: 0 15px; /* Adjust margin between nav items */
+    }
+  /* Stack .oenske images vertically on small screens */
+    .gallery {
+        flex-direction: column;
+        gap: 40px; /* Adjust gap to control spacing between images */
+     	margin-bottom: 40px;
+    }
+    
+    .oenske {
+        margin-bottom: 30px; /* Optional: Adjust margin for more spacing if needed */
+    }
+}
+
+
+
